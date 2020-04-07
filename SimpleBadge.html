@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Simple badge</title>
+        <style>
+        simple-badge {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 2px 8px;
+            margin: 2px 5px;
+            }
+        </style>
+        <script src="SimpleBadge.js"></script>
+        <script>
+            customElements.define('simple-badge', SimpleBadge);
+            document.addEventListener('DOMContentLoaded', () => {
+                const badge = document.createElement('simple-badge');
+                badge.number = 1050;
+                document.body.appendChild(badge);
+            });
+        </script>
+    </head>
+    <body>
+        <simple-badge number="100"/>
+    </body>
+</html>    
